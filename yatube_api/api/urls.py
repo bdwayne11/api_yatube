@@ -1,9 +1,10 @@
 from django.urls import path, include
+
 from rest_framework import routers
+from rest_framework.authtoken import views
 
 from api.views import GroupViewSet, PostViewSet, CommentViewSet
 
-from rest_framework.authtoken import views
 
 router = routers.DefaultRouter()
 router.register(r'posts', PostViewSet)
